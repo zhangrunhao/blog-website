@@ -10,9 +10,7 @@ import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: "张润昊的博客",
-  },
+  title: "张润昊的博客",
   description: "这是我的个人博客",
   openGraph: {
     title: "My Portfolio",
