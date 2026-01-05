@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const navItems = {
   "/": {
-    name: "home",
+    name: "首页",
   },
   "/blog": {
     name: "博客",
