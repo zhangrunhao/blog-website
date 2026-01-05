@@ -1,15 +1,14 @@
 import { BlogPosts } from "app/components/posts";
 
 export const metadata = {
-  title: "Blog",
-  description: "Read my blog.",
+  title: "产品列表",
+  description: "产品和Demo列表",
 };
 
 export default function Page() {
   return (
     <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
-      <BlogPosts />
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">产品列表</h1>
     </section>
   );
 }
