@@ -70,28 +70,24 @@ export default async function Blog({ params }: PageProps) {
 
   return (
     <section>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
-            author: {
-              "@type": "Person",
-              name: "My Portfolio",
-            },
-          }),
-        }}
-      />
+      <script type="application/ld+json" suppressHydrationWarning>
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.metadata.title,
+          datePublished: post.metadata.publishedAt,
+          dateModified: post.metadata.publishedAt,
+          description: post.metadata.summary,
+          image: post.metadata.image
+            ? `${baseUrl}${post.metadata.image}`
+            : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+          url: `${baseUrl}/blog/${post.slug}`,
+          author: {
+            "@type": "Person",
+            name: "My Portfolio",
+          },
+        })}
+      </script>
       <h1 className="title font-semibold text-2xl tracking-tighter">
         {post.metadata.title}
       </h1>
