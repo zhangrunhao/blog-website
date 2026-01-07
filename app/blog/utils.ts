@@ -87,19 +87,19 @@ function parseFrontmatter(fileContent: string) {
   return { metadata: metadata as Metadata, content };
 }
 
-function getMDXFiles(dir: string) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+function getMarkdownFiles(dir: string) {
+  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".md");
 }
 
-function readMDXFile(filePath: string) {
+function readMarkdownFile(filePath: string) {
   let rawContent = fs.readFileSync(filePath, "utf-8");
   return parseFrontmatter(rawContent);
 }
 
-function getMDXData(dir: string) {
-  let mdxFiles = getMDXFiles(dir);
-  return mdxFiles.map((file) => {
-    let { metadata, content } = readMDXFile(path.join(dir, file));
+function getMarkdownData(dir: string) {
+  let markdownFiles = getMarkdownFiles(dir);
+  return markdownFiles.map((file) => {
+    let { metadata, content } = readMarkdownFile(path.join(dir, file));
     let slug = path.basename(file, path.extname(file));
 
     return {
@@ -195,12 +195,12 @@ export function getCategoryDisplayName(slug: string) {
 }
 
 export function getBlogPosts(): BlogPost[] {
-  return getMDXData(path.join(process.cwd(), "app", "blog", "posts")).map(
-    (post) => ({
-      ...post,
-      metadata: normalizeMetadata(post.metadata),
-    })
-  );
+  return getMarkdownData(
+    path.join(process.cwd(), "app", "blog", "posts")
+  ).map((post) => ({
+    ...post,
+    metadata: normalizeMetadata(post.metadata),
+  }));
 }
 
 export function getAllCategories(posts: BlogPost[] = getBlogPosts()) {
