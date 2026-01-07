@@ -26,12 +26,7 @@ export async function generateMetadata({ params }: PageProps) {
     return;
   }
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata;
+  let { title, createdAt, summary: description, image } = post.metadata;
   let ogImage = image
     ? image
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
@@ -43,7 +38,7 @@ export async function generateMetadata({ params }: PageProps) {
       title,
       description,
       type: "article",
-      publishedTime,
+      publishedTime: createdAt,
       url: `${baseUrl}/blog/${post.slug}`,
       images: [
         {
@@ -75,8 +70,8 @@ export default async function Blog({ params }: PageProps) {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: post.metadata.title,
-          datePublished: post.metadata.publishedAt,
-          dateModified: post.metadata.publishedAt,
+          datePublished: post.metadata.createdAt,
+          dateModified: post.metadata.createdAt,
           description: post.metadata.summary,
           image: post.metadata.image
             ? `${baseUrl}${post.metadata.image}`
@@ -93,7 +88,7 @@ export default async function Blog({ params }: PageProps) {
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600">
-          {formatDate(post.metadata.publishedAt)}
+          {formatDate(post.metadata.createdAt)}
         </p>
       </div>
       <article className="prose">

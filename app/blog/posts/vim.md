@@ -1,7 +1,8 @@
 ---
 title: "Embracing Vim: The Unsung Hero of Code Editors"
-publishedAt: "2024-01-09"
+createdAt: "2024-01-09"
 summary: "Discover why Vim, with its steep learning curve, remains a beloved tool among developers for editing code efficiently and effectively."
+categories: ["tech", "tools"]
 ---
 
 In the world of software development, where the latest and greatest tools frequently capture the spotlight, Vim stands out as a timeless classic. Despite its age and initial complexity, Vim has managed to retain a devoted following of developers who swear by its efficiency, versatility, and power.
