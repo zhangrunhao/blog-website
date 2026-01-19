@@ -66,49 +66,59 @@ function CardLink({
 
 const sampleProducts: ProductItem[] = [
   {
-    id: "birthday-manager",
-    title: "生日管理 App",
-    description:
-      "帮你记录亲友生日与重要日程，支持提醒与个性化祝福模板，方便日常维护关系。",
-    cover:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-    coverAlt: "生日提醒与管理",
-    type: "detail",
-    detailUrl: "/product/birthday-manager",
-    downloadUrl: "https://example.com/app-store/birthday-manager",
-  },
-  {
     id: "card-game-demo",
     title: "卡牌游戏在线 Demo",
     description: "即时对战的卡牌策略玩法，支持在线体验与快速上手规则说明。",
     cover:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+      "https://zhangrunhao.oss-cn-beijing.aliyuncs.com/iShot_2026-01-19_17.45.27.png",
     coverAlt: "卡牌游戏在线体验",
     type: "demo",
-    demoUrl: "https://example.com/demo/card-game",
+    demoUrl: "http://101.200.185.29/",
   },
-  {
-    id: "card-game-demo-2",
-    title: "卡牌游戏 Demo 2",
-    description: "第二套卡牌玩法演示，包含新机制与更快的对局节奏。",
-    cover:
-      "https://images.unsplash.com/photo-1519885273780-103e8b9d6c8a?auto=format&fit=crop&w=1200&q=80",
-    coverAlt: "卡牌游戏演示 2",
-    type: "demo",
-    demoUrl: "https://example.com/demo/card-game-2",
-  },
-  {
-    id: "budget-book",
-    title: "记账 App",
-    description:
-      "简洁的收支记录与账单统计，支持分类预算与月度报表导出。",
-    cover:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-    coverAlt: "记账与预算管理",
-    type: "detail",
-    detailUrl: "/product/budget-book",
-    downloadUrl: "https://example.com/app-store/budget-book",
-  },
+  // {
+  //   id: "birthday-manager",
+  //   title: "生日管理 App",
+  //   description:
+  //     "帮你记录亲友生日与重要日程，支持提醒与个性化祝福模板，方便日常维护关系。",
+  //   cover:
+  //     "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+  //   coverAlt: "生日提醒与管理",
+  //   type: "detail",
+  //   detailUrl: "/product/birthday-manager",
+  //   downloadUrl: "https://example.com/app-store/birthday-manager",
+  // },
+  // {
+  //   id: "card-game-demo",
+  //   title: "卡牌游戏在线 Demo",
+  //   description: "即时对战的卡牌策略玩法，支持在线体验与快速上手规则说明。",
+  //   cover:
+  //     "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+  //   coverAlt: "卡牌游戏在线体验",
+  //   type: "demo",
+  //   demoUrl: "https://example.com/demo/card-game",
+  // },
+  // {
+  //   id: "card-game-demo-2",
+  //   title: "卡牌游戏 Demo 2",
+  //   description: "第二套卡牌玩法演示，包含新机制与更快的对局节奏。",
+  //   cover:
+  //     "https://images.unsplash.com/photo-1519885273780-103e8b9d6c8a?auto=format&fit=crop&w=1200&q=80",
+  //   coverAlt: "卡牌游戏演示 2",
+  //   type: "demo",
+  //   demoUrl: "https://example.com/demo/card-game-2",
+  // },
+  // {
+  //   id: "budget-book",
+  //   title: "记账 App",
+  //   description:
+  //     "简洁的收支记录与账单统计，支持分类预算与月度报表导出。",
+  //   cover:
+  //     "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+  //   coverAlt: "记账与预算管理",
+  //   type: "detail",
+  //   detailUrl: "/product/budget-book",
+  //   downloadUrl: "https://example.com/app-store/budget-book",
+  // },
 ];
 
 export function Products({
